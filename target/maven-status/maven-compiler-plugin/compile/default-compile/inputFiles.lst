@@ -1,0 +1,16 @@
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/repository/client/IClientRepository.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/generalMessage/MessageBadRequestDTO.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/service/impl/ClientServiceImpl.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/exceptions/impl/ResourceNotFoundException.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/generalMessage/MessageDTO.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/constants/ClientConstants.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/generalMessage/MessageInternalErrorDTO.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/mapper/MapperClient.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/DemoClientsApplication.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/entity/ClientEntity.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/dto/ClientDTO.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/exceptions/GlobalControllerExceptionHandler.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/generalMessage/MessageClientNotFoundDTO.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/exceptions/impl/ResourceBadRequestException.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/controller/client/ClientController.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/service/IClientService.java
