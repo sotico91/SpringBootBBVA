@@ -1,0 +1,13 @@
+com/co/bbva/api/clients/DemoClientsApplicationTest.class
+com/co/bbva/api/clients/model/entity/ClientEntityTest.class
+com/co/bbva/api/clients/model/generalMessage/MessageInternalErrorDTOTest.class
+com/co/bbva/api/clients/exceptions/impl/ResourceBadRequestExceptionTest.class
+com/co/bbva/api/clients/exceptions/GlobalControllerExceptionHandlerTest.class
+com/co/bbva/api/clients/service/impl/ClientServiceImplTest.class
+com/co/bbva/api/clients/model/generalMessage/MessageBadRequestDTOTest.class
+com/co/bbva/api/clients/model/mapper/MapperClientTest.class
+com/co/bbva/api/clients/service/IClientServiceTest.class
+com/co/bbva/api/clients/constants/ClientConstantsTest.class
+com/co/bbva/api/clients/model/dto/ClientDTOTest.class
+com/co/bbva/api/clients/controller/client/ClientControllerTest.class
+com/co/bbva/api/clients/model/generalMessage/MessageClientNotFoundDTOTest.class

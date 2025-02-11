@@ -1,0 +1,13 @@
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/model/generalMessage/MessageBadRequestDTOTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/model/mapper/MapperClientTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/DemoClientsApplicationTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/model/generalMessage/MessageClientNotFoundDTOTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/service/IClientServiceTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/model/entity/ClientEntityTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/model/dto/ClientDTOTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/model/generalMessage/MessageInternalErrorDTOTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/controller/client/ClientControllerTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/exceptions/impl/ResourceBadRequestExceptionTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/constants/ClientConstantsTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/exceptions/GlobalControllerExceptionHandlerTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/service/impl/ClientServiceImplTest.java
