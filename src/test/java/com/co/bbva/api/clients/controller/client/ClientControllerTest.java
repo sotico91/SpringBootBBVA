@@ -1,5 +1,6 @@
 package com.co.bbva.api.clients.controller.client;
 
+import com.co.bbva.api.clients.exceptions.impl.ResourceBadRequestException;
 import com.co.bbva.api.clients.exceptions.impl.ResourceNotFoundException;
 import com.co.bbva.api.clients.model.dto.ClientDTO;
 import com.co.bbva.api.clients.service.impl.ClientServiceImpl;
@@ -90,12 +91,11 @@ class ClientControllerTest {
         clientDTO.setFirstName("John");
         clientDTO.setLastName("Doe");
 
-        when(clientService.searchClient(documentType, documentNumber, withAddress)).thenReturn(clientDTO);
+        when(clientService.searchClient(documentType, documentNumber, withAddress)).thenThrow(new ResourceBadRequestException("withAddress is required"));
 
-        ResponseEntity<ClientDTO> response = clientController.searchClient(documentType, documentNumber, withAddress);
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(clientDTO, response.getBody());
+        assertThrows(ResourceBadRequestException.class, () -> {
+            clientController.searchClient(documentType, documentNumber, withAddress);
+        });
     }
 
     @Test

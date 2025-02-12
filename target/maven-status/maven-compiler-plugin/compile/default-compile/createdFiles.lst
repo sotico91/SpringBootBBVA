@@ -13,6 +13,7 @@ com/co/bbva/api/clients/model/dto/ClientDTO$ClientDTOBuilder.class
 com/co/bbva/api/clients/model/dto/ClientDTO.class
 com/co/bbva/api/clients/model/entity/ClientEntity.class
 com/co/bbva/api/clients/constants/ClientConstants.class
+com/co/bbva/api/clients/exceptions/impl/ResourceInternalServerException.class
 com/co/bbva/api/clients/model/mapper/MapperClient.class
 com/co/bbva/api/clients/model/generalMessage/MessageBadRequestDTO.class
 com/co/bbva/api/clients/service/impl/ClientServiceImpl.class

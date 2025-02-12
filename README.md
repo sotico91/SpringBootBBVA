@@ -40,6 +40,14 @@ http://localhost:8090/swagger-ui/index.html#/
   }
 - Update user by documentType And documentNumber
 
+## Swagger Screen
+
+![img.png](img.png)
+
+## H2 Console
+
+![img_1.png](img_1.png)
+
 
 
 
