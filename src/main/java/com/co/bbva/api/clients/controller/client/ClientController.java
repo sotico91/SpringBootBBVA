@@ -1,5 +1,6 @@
 package com.co.bbva.api.clients.controller.client;
 
+import com.co.bbva.api.clients.exceptions.impl.ResourceBadRequestException;
 import com.co.bbva.api.clients.model.dto.ClientDTO;
 import com.co.bbva.api.clients.model.generalMessage.MessageBadRequestDTO;
 import com.co.bbva.api.clients.model.generalMessage.MessageClientNotFoundDTO;
@@ -48,6 +49,10 @@ public class ClientController {
             @RequestParam(required = false) Boolean withAddress) {
 
         logger.info("Start searchClient method {},{}",documentType, documentNumber);
+
+        if (withAddress == null) {
+            throw new ResourceBadRequestException("withAddress is required");
+        }
 
         ClientDTO  clientDTO = clientService.searchClient(documentType, documentNumber, withAddress);
 

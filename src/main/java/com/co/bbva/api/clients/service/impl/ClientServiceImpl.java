@@ -1,6 +1,7 @@
 package com.co.bbva.api.clients.service.impl;
 
 import com.co.bbva.api.clients.constants.ClientConstants;
+import com.co.bbva.api.clients.exceptions.impl.ResourceInternalServerException;
 import com.co.bbva.api.clients.exceptions.impl.ResourceNotFoundException;
 import com.co.bbva.api.clients.model.dto.ClientDTO;
 import com.co.bbva.api.clients.model.entity.ClientEntity;
@@ -12,6 +13,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 @Service
 @AllArgsConstructor
 public class ClientServiceImpl implements IClientService {
@@ -20,6 +24,10 @@ public class ClientServiceImpl implements IClientService {
 
     private final IClientRepository clientRepository;
     private final MapperClient mapperClient;
+
+    private static final String EMAIL_PATTERN ="^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+
+    private static final Pattern pattern = Pattern.compile(EMAIL_PATTERN);
 
     @Override
     public ClientDTO searchClient(final String documentType, final String documentNumber, final Boolean withAddress) {
@@ -44,10 +52,20 @@ public class ClientServiceImpl implements IClientService {
         if (clientEntity == null) {
             throw new ResourceNotFoundException(ClientConstants.CLIENT_NOT_FOUND.getMessage());
         }
-        
+
+        if (clientDTO.getEmail() != null && !isValidEmail(clientDTO.getEmail())) {
+            throw new ResourceInternalServerException(ClientConstants.CLIENT_INTERNAL_SERVER_ERROR.getMessage());
+        }
+
         ClientEntity clientEntityOut = clientRepository.save(mapperClient.toClientEntity(clientDTO, clientEntity));
 
         logger.info("End updateClient method");
         return mapperClient.entityToClientDTO(clientEntityOut);
+    }
+
+    public static boolean isValidEmail(String email) {
+
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }

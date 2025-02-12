@@ -11,7 +11,8 @@ public enum ClientConstants {
     CLIENT_CREATED("Client created successfully"),
     CLIENT_UPDATED("Client updated successfully"),
     CLIENT_DELETED("Client deleted successfully"),
-    CLIENT_BAD_REQUEST("Bad request");
+    CLIENT_BAD_REQUEST("Bad request"),
+    CLIENT_INTERNAL_SERVER_ERROR("Internal server error");
 
     private final String message;
 
