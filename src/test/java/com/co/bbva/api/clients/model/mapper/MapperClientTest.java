@@ -7,10 +7,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-
+/**
+ * Unit tests for MapperClient.
+ */
 class MapperClientTest {
 
-    private final MapperClient mapperClient = new MapperClient();
+    private final MapperClient mapperClient = new MapperClientImpl();
 
     @Test
     void toClientDTO_withAddress_returnsClientDTOWithAddress() {

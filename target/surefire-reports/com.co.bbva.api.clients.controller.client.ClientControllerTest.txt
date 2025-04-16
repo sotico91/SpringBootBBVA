@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.co.bbva.api.clients.controller.client.ClientControllerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.677 s <<< FAILURE! -- in com.co.bbva.api.clients.controller.client.ClientControllerTest
-com.co.bbva.api.clients.controller.client.ClientControllerTest.searchClient_withNullWithAddress_returnsClientDTO -- Time elapsed: 0.045 s <<< ERROR!
-com.co.bbva.api.clients.exceptions.impl.ResourceBadRequestException: withAddress is required
-	at com.co.bbva.api.clients.controller.client.ClientController.searchClient(ClientController.java:54)
-	at com.co.bbva.api.clients.controller.client.ClientControllerTest.searchClient_withNullWithAddress_returnsClientDTO(ClientControllerTest.java:95)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.849 s -- in com.co.bbva.api.clients.controller.client.ClientControllerTest

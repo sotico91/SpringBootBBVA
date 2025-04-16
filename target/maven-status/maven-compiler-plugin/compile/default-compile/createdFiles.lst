@@ -4,6 +4,7 @@ com/co/bbva/api/clients/controller/client/ClientController.class
 com/co/bbva/api/clients/model/entity/ClientEntity$ClientEntityBuilder.class
 com/co/bbva/api/clients/exceptions/impl/ResourceBadRequestException.class
 com/co/bbva/api/clients/exceptions/GlobalControllerExceptionHandler.class
+com/co/bbva/api/clients/model/mapper/MapperClientImpl.class
 com/co/bbva/api/clients/model/generalMessage/MessageInternalErrorDTO.class
 com/co/bbva/api/clients/model/generalMessage/MessageDTO.class
 com/co/bbva/api/clients/DemoClientsApplication.class

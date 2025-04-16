@@ -9,7 +9,9 @@ import org.springframework.http.ResponseEntity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+/**
+ * Clase de pruebas para el manejador de excepciones globales.
+ */
 class GlobalControllerExceptionHandlerTest {
 
     private final GlobalControllerExceptionHandler handler = new GlobalControllerExceptionHandler();
@@ -44,4 +46,13 @@ class GlobalControllerExceptionHandlerTest {
         assertEquals("Bad request", response.getBody().getMessage());
     }
 
+    // Nuevo test: verificar que el log no lanza excepción y el método soporta null
+    @Test
+    void handleException_withNullMessage_returnsInternalServerError() {
+        Exception ex = new Exception((String) null);
+        ResponseEntity<MessageDTO> response = handler.handleException(ex);
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), response.getBody().getCode());
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), response.getBody().getMessage());
+    }
 }

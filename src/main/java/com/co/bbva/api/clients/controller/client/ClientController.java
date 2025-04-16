@@ -1,11 +1,10 @@
 package com.co.bbva.api.clients.controller.client;
 
-import com.co.bbva.api.clients.exceptions.impl.ResourceBadRequestException;
 import com.co.bbva.api.clients.model.dto.ClientDTO;
 import com.co.bbva.api.clients.model.generalMessage.MessageBadRequestDTO;
 import com.co.bbva.api.clients.model.generalMessage.MessageClientNotFoundDTO;
 import com.co.bbva.api.clients.model.generalMessage.MessageInternalErrorDTO;
-import com.co.bbva.api.clients.service.impl.ClientServiceImpl;
+import com.co.bbva.api.clients.service.IClientService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -25,7 +24,7 @@ public class ClientController {
 
     private static final Logger logger = LogManager.getLogger(ClientController.class);
 
-    private final ClientServiceImpl clientService;
+    private final IClientService clientService;
 
     @Operation(summary = "Search client")
     @ApiResponses(value = {
@@ -46,13 +45,9 @@ public class ClientController {
     public ResponseEntity<ClientDTO> searchClient(
             @PathVariable final String documentType,
             @PathVariable final String documentNumber,
-            @RequestParam(required = false) Boolean withAddress) {
+            @RequestParam(required = false, defaultValue = "false") Boolean withAddress) {
 
         logger.info("Start searchClient method {},{}",documentType, documentNumber);
-
-        if (withAddress == null) {
-            throw new ResourceBadRequestException("withAddress is required");
-        }
 
         ClientDTO  clientDTO = clientService.searchClient(documentType, documentNumber, withAddress);
 

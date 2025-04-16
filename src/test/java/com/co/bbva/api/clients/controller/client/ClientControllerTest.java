@@ -3,7 +3,7 @@ package com.co.bbva.api.clients.controller.client;
 import com.co.bbva.api.clients.exceptions.impl.ResourceBadRequestException;
 import com.co.bbva.api.clients.exceptions.impl.ResourceNotFoundException;
 import com.co.bbva.api.clients.model.dto.ClientDTO;
-import com.co.bbva.api.clients.service.impl.ClientServiceImpl;
+import com.co.bbva.api.clients.service.IClientService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -18,7 +18,7 @@ import static org.mockito.Mockito.when;
 class ClientControllerTest {
 
     @Mock
-    private ClientServiceImpl clientService;
+    private IClientService clientService;
 
     @InjectMocks
     private ClientController clientController;

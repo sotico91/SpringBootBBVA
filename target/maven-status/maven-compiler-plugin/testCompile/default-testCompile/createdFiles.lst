@@ -1,4 +1,5 @@
 com/co/bbva/api/clients/DemoClientsApplicationTest.class
+com/co/bbva/api/clients/exceptions/impl/ResourceInternalServerExceptionTest.class
 com/co/bbva/api/clients/model/entity/ClientEntityTest.class
 com/co/bbva/api/clients/model/generalMessage/MessageInternalErrorDTOTest.class
 com/co/bbva/api/clients/exceptions/impl/ResourceBadRequestExceptionTest.class

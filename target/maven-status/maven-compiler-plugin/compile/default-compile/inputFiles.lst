@@ -12,6 +12,7 @@
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/exceptions/GlobalControllerExceptionHandler.java
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/exceptions/impl/ResourceInternalServerException.java
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/generalMessage/MessageClientNotFoundDTO.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/model/mapper/MapperClientImpl.java
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/exceptions/impl/ResourceBadRequestException.java
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/controller/client/ClientController.java
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/main/java/com/co/bbva/api/clients/service/IClientService.java

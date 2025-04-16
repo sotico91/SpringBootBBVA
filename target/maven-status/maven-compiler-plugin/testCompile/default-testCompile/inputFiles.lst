@@ -11,3 +11,4 @@
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/constants/ClientConstantsTest.java
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/exceptions/GlobalControllerExceptionHandlerTest.java
 /Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/service/impl/ClientServiceImplTest.java
+/Users/macbookpro/Documents/GitHub/SpringBootBBVA/src/test/java/com/co/bbva/api/clients/exceptions/impl/ResourceInternalServerExceptionTest.java
