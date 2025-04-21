@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * Clase de pruebas para el manejador de excepciones globales.
@@ -22,8 +23,10 @@ class GlobalControllerExceptionHandlerTest {
         ResponseEntity<MessageDTO> response = handler.handleException(ex);
 
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), response.getBody().getCode());
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), response.getBody().getMessage());
+        assertNotNull(response.getBody(), "Response body should not be null");
+        MessageDTO body = response.getBody();
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), body.getCode());
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), body.getMessage());
     }
 
     @Test
@@ -32,8 +35,10 @@ class GlobalControllerExceptionHandlerTest {
         ResponseEntity<MessageDTO> response = handler.handleResourceNotFoundException(ex);
 
         assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
-        assertEquals(HttpStatus.NOT_FOUND.value(), response.getBody().getCode());
-        assertEquals("Resource not found", response.getBody().getMessage());
+        assertNotNull(response.getBody(), "Response body should not be null");
+        MessageDTO body = response.getBody();
+        assertEquals(HttpStatus.NOT_FOUND.value(), body.getCode());
+        assertEquals("Resource not found", body.getMessage());
     }
 
     @Test
@@ -42,8 +47,10 @@ class GlobalControllerExceptionHandlerTest {
         ResponseEntity<MessageDTO> response = handler.handleConversion(ex);
 
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-        assertEquals(HttpStatus.BAD_REQUEST.value(), response.getBody().getCode());
-        assertEquals("Bad request", response.getBody().getMessage());
+        assertNotNull(response.getBody(), "Response body should not be null");
+        MessageDTO body = response.getBody();
+        assertEquals(HttpStatus.BAD_REQUEST.value(), body.getCode());
+        assertEquals("Bad request", body.getMessage());
     }
 
     // Nuevo test: verificar que el log no lanza excepción y el método soporta null
@@ -52,7 +59,9 @@ class GlobalControllerExceptionHandlerTest {
         Exception ex = new Exception((String) null);
         ResponseEntity<MessageDTO> response = handler.handleException(ex);
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), response.getBody().getCode());
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), response.getBody().getMessage());
+        assertNotNull(response.getBody(), "Response body should not be null");
+        MessageDTO body = response.getBody();
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), body.getCode());
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), body.getMessage());
     }
 }
